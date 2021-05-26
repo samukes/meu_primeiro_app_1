@@ -1,16 +1,14 @@
-# meu_primeiro_app
+# Meu Primeiro App
 
-A new Flutter project.
+Aplicativo de apresentação inicial de componentes e estrutura de projeto do Flutter no curso Ignite trilha flutter da Rocketseat.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+Este projeto foi iniciado utilizando um arquivo, a Main. Nesta foram colocadas todas as classes necessárias para o funcionamento.
 
-A few resources to get you started if this is your first Flutter project:
+Segundo o desafio ao final do módulo eu separei estas classes em arquivos e pastas:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- core/app_widget:
+   aqui vai o widget do App.
+- pages/home_page:
+   aqui vai a página inicial.
