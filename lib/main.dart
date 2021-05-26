@@ -19,32 +19,57 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       title: "Meu primeiro App",
       home: HomePage(),
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(
+        primaryColor: Colors.purple,
+        scaffoldBackgroundColor: Colors.purpleAccent,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.purple,
+        ),
+      ),
+      darkTheme: ThemeData(
+        primaryColor: Colors.black,
+        scaffoldBackgroundColor: Colors.grey,
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Colors.black,
+        ),
+      ),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return HomePageState();
+  }
+}
+
+class HomePageState extends State<HomePage> {
+  var count = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple,
       appBar: AppBar(
-        backgroundColor: Colors.purpleAccent,
         title: const Text("Contador"),
         centerTitle: true,
       ),
-      body: const Center(
+      body: Center(
         child: Text(
-          "Meu Primeiro Texto",
+          "Contagem: $count",
           style: TextStyle(color: Colors.white),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            count++;
+          });
+        },
         child: const Icon(
           Icons.add,
         ),
-        backgroundColor: Colors.purpleAccent,
       ),
     );
   }
